@@ -13,14 +13,26 @@
 // em cheque
 // no cartao
 
-const precoProduto = parseFloat(prompt("Qual o metado de pagamento?"));
+let precoProduto = parseFloat(prompt("Qual o valor do produto?"));
+
+while (isNaN(precoProduto) == true || precoProduto <= 0){  //while = enquanto
+    alert(' O preço digitado e invalido, digite sem caracteres especiais (letras ou acento)');
+    precoProduto = parseFloat(prompt('Qual o preço do produto?'));
+}
+
 const mensaguem = `
 Informe o métado de pagamento 
 ditete 1 pagamento em dinheiro
 digite 2 pagamento em cheque
 digite 3 pagameto e mcartao
 `
-const metadoDePagameto = prompt(mensaguem);
+let metadoDePagameto = prompt(mensaguem);
+
+while (isNaN(metadoDePagameto) < 0 || metadoDePagameto >4){  //while = enquanto
+    alert('Métado de pagameto invlido)');
+    precoProduto = prompt('informe o preco do produto');
+}
+
 
 console.log(precoProduto);
 console.log(metadoDePagameto);
@@ -48,3 +60,7 @@ if (metadoDePagameto == 1 || metadoDePagameto == 2) {
         alert(`O preço final do produto é ${precoProduto} reais`);
     }
 }
+
+
+
+//estrutura de repetição
