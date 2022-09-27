@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // crir  um novo array 
+        const num = [];
+        for (let i = 1; i <= 6; i++) {
+            const n = parseInt(prompt(`Digite o ${i} numero`))
+            num.push(n)
+        }
+
+        //separa os pares dos inpares
+        const pares = [];
+        const inpares = [];
+
+        //percorrer o array com os numeros informados
+        //o array que queromos percorrer
+        for (let numero of num) {
+            // separarr os valores pares dos inpares
+            if(numero % 2 == 0){
+            pares.push(numero)
+            }else{
+                inpares.push(numero)
+            }
+        }
+
+        alert(`Nos temos ${pares.length} valores pares: ${pares.join(',')}`)
+        alert(`Nos temos ${inpares.length} valores pares: ${inpares.join(',')}`)
+    </script>
+</body>
+
+</html>
