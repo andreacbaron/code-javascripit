@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: grey; margin: 40px;">
+    <h1>Exercicio</h1>
+    <div>
+
+        <p>
+            Crie um algortimo que recebe informações de 15 produtos. Cada produto possui nome, marca, uma
+            foto (link de uma imagem da internet), preço unitário
+            e a quantidade de produtos em estoque. Ao receber essas informações dos produtos, imprima no HTML
+            essas informações de cada produto e o produto entre o preço e a quantidade de produtos em estoque (preço
+            total).
+        </p>
+    </div><br><br>
+
+
+    <Script>
+
+
+        let produtos = [
+            {
+                nome: '',
+                marca: '',
+                foto: '',
+                preco: 0,
+                estoque: 0,
+                valorTotal: 0,
+            }
+        ]
+
+        for (let i = 1; i <= 15; i++) {  // 'In' vai interar todos os elementos, mesmo que seja diferente 
+            produtos.nome = prompt(`Informe nome do:  produto ${i}`);
+            produtos.marca = prompt(`Digite a marca do produto: ${i} `);
+            produtos.foto = prompt(`Digite o link da imagem:  ${i}`);
+            produtos.preco = parseFloat(prompt(`Informe opreço do produto:  ${i}`));
+            produtos.estoque = parseFloat(prompt(`Informe a quantidade de: ${i} produto`));
+            produtos.valorTotal = produtos.preco * produtos.estoque;
+            // produtos.push = (produtos)
+            produtos.push(i)
+
+            // produtos.preco = (parseFloat(prompt(`Informe a quantidade de ${produto} produto`)))
+
+            console.log(produtos)
+            document.write(`<p>Informe nome do produto ${produtos.nome}</p>`)
+            document.write(`<p>Informe nome produto: ${produtos.marca} </p>`)
+            document.write(`<p>Digite o link da imagem: <img src="${produtos.foto}"></p><br>`)
+            document.write(`<p>Informe opreço do produto: ${produtos.preco}</p>`)
+            document.write(`<p>Quantidade em estoque: ${produtos.estoque}</p>`)
+            document.write(`<p>Quantidade em estoque: ${produtos.valorTotal}</p>`)
+        }
+    </Script> 
+
+</body>
+
+</html>
