@@ -1,0 +1,48 @@
+:root{
+    --azul: #0f6379;
+    --amarelo: #ffd900;
+}
+
+body{
+    background-color: var(--azul);
+}
+main{
+    min-height: 100vp;
+
+}
+
+main-header{
+    height: 90px;
+}
+
+#app-logo{
+    width: 220px;
+}
+
+#add-todo{
+    font-size: 0;
+    background-color:  var(--amarelo);
+}
+
+#todos-list .card{
+    background-color: #ffd900;
+    padding: 30px;
+}
+
+#todos-list .card + .card{
+    margin-top: 10px;
+}
+
+.tudo-text{
+    margin: 0;
+}
+
+.delete-tudo{
+    font-size: 0;
+}
+
+
+img {
+    margin: 30px;
+    padding-left: 40px;
+}
