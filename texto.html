@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  
+<body>
+  
+    <p>Click the button to check 
+      if the browser is online.</p>
+  
+    <button onclick="isOnline()">
+      Click Me
+  </button>
+  
+    <p id="demo"></p>
+  
+    <script>
+        function isOnline() {
+  
+            if (navigator.onLine) {
+                document.getElementById(
+                  "demo").innerHTML = "Online";
+            } else {
+                document.getElementById(
+                  "demo").innerHTML = "Offline";
+            }
+        }
+    </script>
+  
+</body>
+  
+</html>
